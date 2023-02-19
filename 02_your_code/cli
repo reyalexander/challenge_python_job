@@ -1,0 +1,23 @@
+
+if [ "setup" == $1 ]; then
+    echo "Running setup"
+    # Replace this with any commands you need to setup your code
+    # For example:
+    # pip install -r requirements.txt
+    exit;
+fi
+
+if [ "upgrade" == $1 ]; then
+    echo "Upgrading with args: ${@:2}"
+    # Use this line to call your code
+    exit;
+fi
+
+if [ "downgrade" == $1 ]; then
+    echo "Downgrading with args: ${@:2}"
+    # Use this line to call your code
+    exit;
+fi
+
+echo "Your first argument must be either 'setup', 'upgrade' or 'downgrade'"
+exit 5;
